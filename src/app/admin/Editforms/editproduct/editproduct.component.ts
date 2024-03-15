@@ -126,7 +126,8 @@ export class EditproductComponent implements OnInit {
       pmodel:this.productForm.value.productsname,
       pprice:this.productForm.value.price,
       // pimages:this.productForm.value.productImage,
-      pimages : this.productimageData
+      // pimages : this.productimageData
+      ...(this.productimageData ? { pimages: this.productimageData } : {})
     };
     console.log("Before submitting the data is",productData);
     // let formData2 = new FormData();

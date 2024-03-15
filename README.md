@@ -1,4 +1,4 @@
-# Ekari100Ton
+# meet my artist admin panel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 

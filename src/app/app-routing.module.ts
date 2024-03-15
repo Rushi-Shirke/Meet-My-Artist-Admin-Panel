@@ -4,7 +4,7 @@ import { HomeComponent } from './admin/home/home.component';
 import { LoginComponent } from './admin/login/login.component';
 
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { FarmersComponent } from './admin/dashboard/Users/farmers.component';
+import { UsersComponent } from './admin/dashboard/Users/users.component';
 
 import { ArtistComponent } from './admin/dashboard/artist/artist.component';
 import { OrganizerComponent } from './admin/dashboard/organizer/organizer.component';
@@ -35,7 +35,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'Users', component: FarmersComponent },
+      { path: 'Users', component: UsersComponent },
       { path:'artists',component:ArtistComponent},
       { path:'organizers',component:OrganizerComponent},
       { path:'subscription', component:SubscriptionComponent},

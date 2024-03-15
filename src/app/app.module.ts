@@ -26,7 +26,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
-import { FarmersComponent } from './admin/dashboard/Users/farmers.component';
+import { UsersComponent } from './admin/dashboard/Users/users.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -45,7 +45,7 @@ import { EditOrganizerComponent } from './admin/Editforms/edit-organizer/edit-or
 import { ProductsComponent } from './admin/dashboard/products/products.component';
 import { EditproductComponent } from './admin/Editforms/editproduct/editproduct.component';
 import { EditSubscriptionComponent } from './admin/Editforms/edit-subscription/edit-subscription.component';
-import { DatePipe } from '@angular/common';
+import { DatePipe, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CarousalComponent } from './admin/dashboard/carousal/carousal.component';
 import { ArtistCategoryListComponent } from './admin/dashboard/artist-category-list/artist-category-list.component';
 import { OrganizerCategoryListComponent } from './admin/dashboard/organizer-category-list/organizer-category-list.component';
@@ -69,7 +69,7 @@ import { OrganizerSubscriptionStatusComponent } from './admin/dashboard/organize
     SidebarComponent,
     LoginComponent,
     
-    FarmersComponent,
+    UsersComponent,
    
     
     ArtistComponent,
@@ -122,7 +122,7 @@ import { OrganizerSubscriptionStatusComponent } from './admin/dashboard/organize
     MatDialogModule
     
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

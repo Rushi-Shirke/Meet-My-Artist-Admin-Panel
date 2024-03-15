@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-farmers',
-  templateUrl: './farmers.component.html',
-  styleUrls: ['./farmers.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class FarmersComponent {
+export class UsersComponent {
 
 
   // public business!: Business[];
@@ -24,7 +24,7 @@ export class FarmersComponent {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  farmers: any;
+  users: any;
 
   constructor(private service: ServiceService, private router: Router) {}
 
@@ -36,8 +36,8 @@ export class FarmersComponent {
     this.service.getUsersDetails().subscribe({
       next: (res: any) => {
         this.dataLoaded = true;
-        this.farmers = res.users_list;
-        this.dataSource = new MatTableDataSource(this.farmers);
+        this.users = res.users_list;
+        this.dataSource = new MatTableDataSource(this.users);
         // this.dataSource.sort = this.sort;
         // this.dataSource.paginator = this.paginator;
       },
